@@ -1,0 +1,76 @@
+@import "../../global.scss";
+
+
+.home{
+    max-width: 100vw;
+    height: 100vh;
+    background-color: $color-background;
+    .wrapper{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        .logo{
+            margin-top: 20rem;
+            font-size: 6.4rem;
+            font-weight: 700;
+            .logoFront{
+                color : $color-white
+            }
+            .logoEnd{
+                color : $color-primary
+            }
+        }
+        .form{
+            padding: 5rem 0;
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            width: 100%;
+            .field{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                background-color: $color-subBackground;
+                padding: 2rem 1.5rem;
+                color: $color-white;
+                .iconFrom{
+                    padding-right: 1.5rem;
+                    font-size: 2.4rem;
+                }
+                .textField{
+                    color: $color-white;
+                    font-size: 1.6rem;
+                    outline: none;
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    &::placeholder{
+                        color: $color-white;
+                        opacity: .6;
+                    }
+                    
+                }
+            }
+            .keepLogin{
+                display: flex;
+                align-items: center;
+                .icon{
+                    padding-right: .8rem;
+                    font-size: 2.4rem;
+                    color: $color-white;
+                    cursor: pointer;
+                    &:hover{
+                        color: $color-primary;
+                    }
+                }
+                .text{
+                    font-size: 1.6rem;
+                    color: white;
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}
