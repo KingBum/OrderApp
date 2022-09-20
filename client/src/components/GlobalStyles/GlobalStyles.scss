@@ -1,3 +1,9 @@
+@import 'normalize.css';
+
+// :root {
+//     --primary: #fe2c55;
+// }
+
 *{
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -5,7 +11,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
