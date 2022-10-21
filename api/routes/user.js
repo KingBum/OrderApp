@@ -1,10 +1,10 @@
 const router = require("express").Router()
 const User = require("../models/User")
 const bcrypt = require("bcrypt")
-const { verifyTokenAndAdmin } = require('./verifyToken')
+const { verifyTokenAndAdmin,verifyTokenAndAuthorization } = require('./verifyToken')
 
 // Update User
-router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
+router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     if (req.body.password) {
         try {
             const salt = await bcrypt.genSalt(10)
@@ -25,7 +25,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 })
 
 // Delete User
-router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
+router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     try {
         await User.findByIdAndDelete(req.params.id)
         res.status(200).json("Account has been deleted")
@@ -34,7 +34,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
     }
 })
 
-// Get User
+// Get All User
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
     try {
         const user = await User.find()
