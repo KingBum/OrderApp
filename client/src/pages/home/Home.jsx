@@ -20,9 +20,16 @@ export default function Home() {
                 </div>
                 <div className={styles.keepLogin}>
                     <i className={`fa-regular fa-circle-check ${styles.icon}`}></i>
-                    <span className={styles.text}>Keep me logged in</span>
+                    <span className={styles.subText}>Keep me logged in</span>
                 </div>
             </form>
+            <div className={styles.boxLogin}>
+                <button className={styles.btnPrimary}>Login</button>
+                <span className={styles.subText}>Forgot passwords ?</span>
+                <span className={styles.recover}>Recover here</span>
+            </div>
+            <div className={styles.or}>Or</div>
+            <button className={styles.btnSecond}>Login with Guest</button>
         </div>
         
     </div>

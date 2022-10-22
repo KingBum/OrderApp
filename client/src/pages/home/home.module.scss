@@ -12,7 +12,7 @@
         align-items: center;
         margin: 0 auto;
         .logo{
-            margin-top: 20rem;
+            margin-top: 10rem;
             font-size: 6.4rem;
             font-weight: 700;
             .logoFront{
@@ -65,12 +65,54 @@
                         color: $color-primary;
                     }
                 }
-                .text{
+                .subText{
                     font-size: 1.6rem;
-                    color: white;
+                    color: $color-white;
                     opacity: .6;
                 }
             }
+        }
+        .boxLogin{
+            text-align: center;
+            width: 100%;
+            .btnPrimary{
+                padding: 1.5rem 0;
+                border-radius: 2rem;
+                font-size: 2rem;
+                font-weight: bold;
+                width: 100%;
+                color: $color-white;
+                background-color: $color-primary;
+                margin-bottom: 1rem;
+                cursor: pointer;
+            }
+            .subText{
+                font-size: 1.6rem;
+                color: $color-white;
+                opacity: .6;
+            }
+            .recover{
+                margin-left: 1rem;
+                font-size: 1.6rem;
+                color: $color-primary;
+            }
+            
+        }
+        .or{
+            color: $color-white;
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .btnSecond{
+            padding: 1.5rem 10rem;
+            border-radius: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            width: 100%;
+            background-color: $color-white;
+            color: $color-primary;
+            cursor: pointer;
         }
     }
 }
